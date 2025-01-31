@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urbano Coworking & Coliving</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            padding: 15px;
+            color: white;
+        }
+        .logo {
+            width: 350px;
+            height: 100px;
+            margin-right: 50px;
+            background-color: transparent;
+        }
+        .title-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .title {
+            font-size: 26px;
+            font-style: italic;
+            display: inline-block;
+        }
+        .title a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        /* Primeira seção com imagem de fundo */
+        .hero {
+            height: 100vh;
+            background-image: url('./image/crf.jpeg'); /* Troque o caminho pela sua imagem */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1, .hero p {
+            margin: 10px;
+        }
+        /* Seção Sobre Nós com imagem de fundo */
+        .about {
+            background-image: url('./image/pf.jpeg'); /* Troque o caminho pela sua imagem */
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: black;
+            text-align: center;
+        }
+        .about h1, .about h3 {
+            margin-bottom: 20px;
+        }
+        /* Carrossel */
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            width: 60%;
+            margin: 0 auto;
+            position: relative;
+        }
+        .carousel img {
+            width: 100%;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .carousel img.active {
+            display: block;
+            opacity: 1;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./image/moleculaL.jpeg" alt="Logo" class="logo">
+        <div class="title-container"> 
+            <h1 class="title"><a href="#sobre-nos">Sobre Nós</a></h1>
+            <h1 class="title"><a href="#coworking">Coworking</a></h1>
+            <h1 class="title"><a href="#coliving">Coliving</a></h1>
+            <h1 class="title"><a href="https://www.exemplo.com" target="_blank">Quero Agendar</a></h1>
+            <h1 class="title"><a href="#localizacao">Localização</a></h1>
+        </div>
+    </header>
+    
+    <!-- Primeira seção com imagem de fundo -->
+    <section class="hero">
+        <div>
+            <h1>Bem-vindo ao Urbano</h1>
+            <p>Seu novo espaço de trabalho e moradia em Alagoinhas. Viva e trabalhe de forma criativa e colaborativa.</p>
+        </div>
+    </section>
+    
+    <!-- Seção Sobre Nós com imagem de fundo -->
+    <section class="about" id="sobre-nos">
+        <h1>O Urbano</h1>
+        <h3>Sobre Nós</h3>
+        <p>O Urbano nasce com o objetivo de estabelecer um novo conceito de moradia e trabalho na cidade de Alagoinhas. Com um projeto que engloba Coliving e Coworking, buscamos oferecer novas formas de integração e compartilhamento. Tudo isso com preços acessíveis e conforto abundante.</p>
+        <p>A nossa proposta é propiciar aos nossos inquilinos um ambiente interativo, moderno e criativo, com muito respeito e reciprocidade.</p>
+        <p>Ou seja, o Urbano surge em harmonia com uma tendência mundial que só faz crescer: compartilhamento criativo e intelectual, de moradia e trabalho.</p>
+        <p>Estamos esperando por você!</p>
+    </section>
+    
+    <div class="content">
+        <div class="section" id="coworking">
+            <h1>Coworking</h1>
+            <h4>Impulsione sua criatividade</h4>
+            <p>O Coworking é uma nova modalidade de trabalho que já é um sucesso mundo afora e que vem ganhando cada vez mais espaço nos grandes centros. Com rotinas de trabalho cada vez mais colaborativas, a tendência é o modelo se tornar cada vez mais viável e procurado por grandes e pequenas empresas, e também por trabalhadores autônomos.
+
+                Os nossos custos são reduzidos e flexíveis, calculados no seu tempo de trabalho. Com estruturas amplas e adequadas, você pode usufruir de um espaço com troca de ideias, networking e até mesmo a possibilidade de colaboração profissional.
+                
+                Além de espaços coletivos, oferecemos salas climatizadas para reuniões ou ambientes privativos.
+                
+                Está esperando o que para transformar a sua maneira de fazer negócio?</p>
+            <div class="carousel" id="coworking-carousel">
+                <img src="./image/sm.jpeg" class="active" alt="Coworking 1">
+                <img src="./image/et.jpeg" alt="Coworking 2">
+                <img src="./image/sp.jpeg" alt="Coworking 3">
+                <img src="image/sv.jpeg" alt="Coworking 4">
+                <img src="./image/ee.jpeg" alt="Coworking 5">
+                <img src="./image/crf.jpeg" alt="Coworking 6">
+            </div>
+        </div>
+        <div class="section" id="coliving">
+            <h1>Coliving</h1>
+            <h4>Um lar em forma de comunidade</h4>
+            <p>Para quem ainda não conhece, explicamos que o Coliving consiste em um propósito de moradia e compartilhamento. Uma opção mais econômica de viver, mas que preserva seu conforto e privacidade com muito mais facilidades.
+
+                No nosso Coliving, além dos quartos privativos basicamente equipados, temos espaços coletivos como cozinha compartilhadas, salão de jogos, espaços de convivência, lavanderia e muito mais!
+                
+                Com o pagamento de um valor fixo – e que cabe no seu bolso –, você terá a oportunidade de ter seu próprio espaço, mas também de conhecer muita gente nova e bacana. Aqui, disponibilizamos ambientes propícios ao compartilhamento de experiências, modos de vida e ideias que transformam um lar em uma comunidade criativa e interativa.</p>
+            <div class="carousel" id="coliving-carousel">
+                <img src="./image/cn.jpeg" class="active" alt="Coliving 1">
+                <img src="./image/cb2.jpeg" alt="Coliving 2">
+                <img src="./image/qc.jpeg" alt="Coliving 3">
+                <img src="./image/qc2.jpeg" alt="Coliving 4">
+                <img src="./image/qcb.jpeg" alt="Coliving 5">
+                <img src="./image/ec.jpeg" alt="Coliving 6">
+                <img src="./image/ec2.jpeg" alt="Coliving 7">
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <img src="./image/molecula.jpg.jpeg" alt="Logo Urbano">
+        <div class="social-links">
+            <a href="https://www.facebook.com/p/Urbano-Coliving-Coworking-100063153973771/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/seja_urbano/" target="_blank">Instagram</a>
+            <a href="https://whatsfacil.com/0a5d90" target="_blank">WhatsApp</a>
+        </div>
+    </footer>
+    
+    <script>
+        function startCarousel(carouselId) {
+            let index = 0;
+            const images = document.querySelectorAll(`#${carouselId} img`);
+            setInterval(() => {
+                images[index].classList.remove("active");
+                index = (index + 1) % images.length;
+                images[index].classList.add("active");
+            }, 3000); // Troca de imagem a cada 3 segundos
+        }
+        
+        startCarousel("coworking-carousel");
+        startCarousel("coliving-carousel");
+    </script>
+</body>
+</html>
+
+
+
+
